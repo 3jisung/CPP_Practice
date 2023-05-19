@@ -43,17 +43,19 @@ int main()
     // 한글 들어가지 않습니다.
     {
         char Arr[100] = "aa0aa";
+
+        cout << "StringCount Method" << endl;
         int Result = StringCount(Arr);
 
         if (Result != -1)
         {
-            cout << "StringCount Method" << endl << Arr << " 의 글자 수 : " << Result << endl;
+            cout << Arr << " 의 글자 수 : " << Result << endl << endl << endl;
         }
     }
 
     {
         char Arr[100] = "aaa bbb ccc";
-        cout << endl << endl << "ChangeCh Method" << endl << "변경 전 : " << Arr << endl;
+        cout << "ChangeCh Method" << endl << "변경 전 : " << Arr << endl;
 
         ChangeCh(Arr, 'c', 'd');
 
