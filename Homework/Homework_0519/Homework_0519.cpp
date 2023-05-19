@@ -108,7 +108,7 @@ void NumberToString(int _Number, char* _Right)
     int digit = DigitsCount(_Number);
     _Right[digit] = '\0';
 
-    int zeroNumAscii = 48;      // 아스키코드 48~57번 = 숫자 0~9
+    const int zeroNumAscii = 48;      // 아스키코드 48~57번 = 숫자 0~9
     int idx = -1;
 
     // 숫자를 큰 자릿수부터 한 개씩 잘라가며 배열에 채워 넣는 루프문
