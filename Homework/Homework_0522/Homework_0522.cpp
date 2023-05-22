@@ -75,6 +75,11 @@ void DamagePrint(const char* const _AttName, const char* const _DefName, int _At
 void Damage(int& _Hp, int _Att)
 {
     _Hp -= _Att;
+
+    if (_Hp <= 0)
+    {
+        _Hp = 0;
+    }
 }
 
 
@@ -85,7 +90,7 @@ int main()
     char PlayerName[40] = "ppp";
 
     int MonsterHp = 100;
-    int MonsterAtt = 50;
+    int MonsterAtt = 70;
     char MonsterName[40] = "mmm";
 
     int turn = 1;
