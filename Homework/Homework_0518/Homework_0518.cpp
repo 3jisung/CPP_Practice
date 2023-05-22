@@ -3,7 +3,7 @@
 using namespace std;
 
 // 배열의 글자 수를 세는 함수
-int StringCount(char* _Arr)
+int StringCount(const char* const _Arr)
 {
     if (_Arr == nullptr)
     {

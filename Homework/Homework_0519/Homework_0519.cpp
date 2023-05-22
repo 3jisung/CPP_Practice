@@ -166,7 +166,7 @@ int main()
         char ArrCopyText[256] = {};
 
         cout << "StrCopy Method" << endl << "복사 대상 : " << originText << endl << "복사 전 텍스트 : " << ArrCopyText << endl;
-        StrCopy("aaaa bbb ccc", ArrCopyText);
+        StrCopy(originText, ArrCopyText);
 
         cout << "복사 후 텍스트 : " << ArrCopyText << endl << endl << endl;
     }
