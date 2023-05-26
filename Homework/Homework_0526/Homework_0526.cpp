@@ -31,9 +31,9 @@ int main()
     Screen.Init('*');
 
     Player MainPlayer;
-    // 클래스의경우에는 
     MainPlayer.SetPos({ 10, 5 });
 
+    // 벽 10개 랜덤한 위치에 생성
     for (size_t i = 0; i < wallCount; i++)
     {
         int posX = rand() % XLine;
@@ -57,6 +57,7 @@ int main()
     {
         Screen.Clear();
 
+        // 총알로 인해 소멸된 벽은 제외하고 출력
         for (size_t i = 0; i < wallCount; i++)
         {
             if (MainPlayer.GetObstacle(i) != nullptr)
@@ -67,6 +68,7 @@ int main()
 
         Screen.SetPixel(MainPlayer.GetPos(), 'a');
 
+        // 총알을 발사했을 경우 화면에 표시
         if (MainPlayer.GetShotState())
         {
             MainPlayer.ShotBullet();
