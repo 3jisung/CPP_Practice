@@ -120,7 +120,7 @@ public:
         {
             Pos.X = 0;
         }
-        else if (Pos.X > XLine - 1)
+        else if (Pos.X >= XLine)
         {
             Pos.X = XLine - 1;
         }
@@ -128,7 +128,7 @@ public:
         {
             Pos.Y = 0;
         }
-        else if (Pos.Y > YLine - 1)
+        else if (Pos.Y >= YLine)
         {
             Pos.Y = YLine - 1;
         }
@@ -209,6 +209,4 @@ int main()
 
         MainPlayer.Input();
     }
-
-
 }
