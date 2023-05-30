@@ -45,7 +45,7 @@ int main()
 
         for (size_t j = 0; j < i; j++)
         {
-            if (MainPlayer.GetObstacle(i)->GetPos() == MainPlayer.GetObstacle(j)->GetPos())
+            if (MainPlayer.GetPos() == MainPlayer.GetObstacle(i)->GetPos() || MainPlayer.GetObstacle(i)->GetPos() == MainPlayer.GetObstacle(j)->GetPos())
             {
                 i -= 1;
                 break;
