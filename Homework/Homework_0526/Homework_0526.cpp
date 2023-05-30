@@ -43,9 +43,15 @@ int main()
         obstacle->SetPos({ posX, posY });
         MainPlayer.SetObstacle(i, obstacle);
 
+        if (MainPlayer.GetPos() == MainPlayer.GetObstacle(i)->GetPos())
+        {
+            i -= -1;
+            continue;
+        }
+
         for (size_t j = 0; j < i; j++)
         {
-            if (MainPlayer.GetPos() == MainPlayer.GetObstacle(i)->GetPos() || MainPlayer.GetObstacle(i)->GetPos() == MainPlayer.GetObstacle(j)->GetPos())
+            if (MainPlayer.GetObstacle(i)->GetPos() == MainPlayer.GetObstacle(j)->GetPos())
             {
                 i -= 1;
                 break;
